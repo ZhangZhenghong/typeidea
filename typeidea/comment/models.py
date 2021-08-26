@@ -19,4 +19,4 @@ class Comment(models.Model):
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="creation time")
 
     class Meta:
-        verbose_name = verbose_name_plural = "comment"
+        verbose_name = verbose_name_plural = "comment_ZZH"

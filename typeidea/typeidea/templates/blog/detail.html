@@ -1,0 +1,13 @@
+{% if post %}
+
+<h1>{{ post.title }}</h1>
+<div>
+<span>Category:{{ post.category.name }}</span>
+<span>Category:{{ post.owner.username }}</span>
+</div>
+<hr/>
+<p>
+{{ post.content }}
+</p>
+
+{% endif %}

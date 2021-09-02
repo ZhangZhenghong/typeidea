@@ -12,6 +12,9 @@ class Category(models.Model):
   owner = models.ForeignKey(User, verbose_name='author')
   create_time = models.DateTimeField(auto_now_add=True, verbose_name = 'creation time')
 
+  def __str__(self):
+    return self.name
+
   class Meta:
     verbose_name = verbose_name_plural = 'catagories'
 
@@ -27,6 +30,8 @@ class Tag(models.Model):
 
   class Meta:
     verbose_name = verbose_name_plural = 'Tags'
+  def __str__(self):
+    return self.name
 
 class Post(models.Model):
   STATUS_NORMAL = 1
@@ -44,7 +49,9 @@ class Post(models.Model):
   class Meta:
     verbose_name = verbose_name_plural = 'wenzhang'
     ordering = ['-id']
- 
+
+  def __str__(self):
+    return self.title 
   
 
 

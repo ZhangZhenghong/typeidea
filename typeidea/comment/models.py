@@ -20,3 +20,6 @@ class Comment(models.Model):
 
     class Meta:
         verbose_name = verbose_name_plural = "comment_ZZH"
+
+    def __str__(self):
+      return self.nickname
